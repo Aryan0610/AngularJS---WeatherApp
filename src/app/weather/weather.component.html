@@ -1,0 +1,15 @@
+<div class="weatherCard">
+    <div class="weatherCardComponent">
+        <div class="inputContainer">
+            <input type="text" (input)="onInput($event)" placeholder="Enter city">
+            <button (click)="getWeather(inputValue)">Get Weather</button>
+            <div>{{error}}</div>
+        </div>
+        <div class="city" [textContent]="city"></div>
+        <div class="date" [textContent]="date"></div>
+    </div>
+    <div class="ImgAndTempContainer">
+        <img [src]="imgUrl" alt="Weather Icon" width="96px" height="96px">
+        <div class="temperature">{{ weatherData?.main?.temp }} °C</div>
+    </div>
+</div>
